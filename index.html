@@ -33,3 +33,56 @@
     </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الاستشارات</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
+</head>
+<body>
+    <header>
+        <h1>موقع الاستشارات</h1>
+        <p>احصل على استشارة من الخبراء في مختلف المجالات.</p>
+    </header>
+
+    <section>
+        <h2>اكتب استشارتك هنا:</h2>
+        <form id="consultationForm">
+            <label for="name">اسمك:</label>
+            <input type="text" id="name" required><br><br>
+
+            <label for="query">استشارتك:</label>
+            <textarea id="query" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="button" onclick="submitConsultation()">إرسال الاستشارة</button>
+        </form>
+    </section>
+
+    <div id="responseMessage"></div> <!-- مكان لعرض الرد بعد إرسال الاستشارة -->
+
+    <footer>
+        <p>&copy; 2024 موقع الاستشارات. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- كود JavaScript هنا -->
+    <script>
+        // دالة لتقديم الاستشارة
+        function submitConsultation() {
+            // الحصول على القيم المدخلة من المستخدم
+            var name = document.getElementById("name").value;
+            var query = document.getElementById("query").value;
+            
+            if (name && query) {
+                // إذا كانت جميع الحقول مكتملة، عرض رسالة نجاح
+                document.getElementById("responseMessage").innerHTML = "<p>شكراً " + name + "! لقد تم إرسال استشارتك بنجاح. سيتم الرد عليك قريباً.</p>";
+                document.getElementById("consultationForm").reset();  // مسح الحقول بعد الإرسال
+            } else {
+                // في حالة وجود حقل فارغ
+                alert("يرجى ملء جميع الحقول!");
+            }
+        }
+    </script>
+</body>
+</html>
