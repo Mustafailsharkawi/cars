@@ -3,61 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Consulting Services</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Linking CSS file -->
+    <title>AI Car Consulting Services</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>AI Consulting Services</h1>
-        <p>Get expert AI-powered consulting solutions, specialized in the automotive industry.</p>
+        <h1>AI Car Consulting Services</h1>
+        <p>Specialized AI solutions for enhancing car performance and safety.</p>
     </header>
 
     <section>
+        <h2>About AI in Cars</h2>
+        <p>
+            Artificial intelligence is transforming the automotive industry by improving safety, efficiency, and driver experience.  
+            From self-driving technology to predictive maintenance, AI ensures smarter and more reliable vehicles for everyone.
+        </p>
+    </section>
+
+    <section>
         <h2>Our Services</h2>
-        <ul>
-            <li><a href="https://www.customaisolutions.com" target="_blank">Custom AI Solutions</a></li>
-            <li><a href="https://www.data-analysis.com" target="_blank">Data Analysis and Insights</a></li>
-            <li><a href="https://www.machinelearningdev.com" target="_blank">Machine Learning Development</a></li>
-            <li><a href="https://www.aiplanningstrategy.com" target="_blank">AI Strategy and Planning</a></li>
-        </ul>
+        <div class="services">
+            <a href="https://example.com/custom-ai">Custom AI Solutions</a>
+            <a href="https://example.com/data-analysis">Data Analysis and Insights</a>
+            <a href="https://example.com/machine-learning">Machine Learning Development</a>
+            <a href="https://example.com/ai-strategy">AI Strategy and Planning</a>
+        </div>
     </section>
 
     <section>
         <h2>Contact Us</h2>
-        <p>If you're interested in our services, feel free to reach out:</p>
+        <p>Feel free to reach us for any inquiries:</p>
         <address>
-            <strong>Email:</strong> <a href="mailto:mustafamagdy743@gmail.com">mustafamagdy743@gmail.com</a><br>
-            <strong>Phone:</strong> <a href="tel:+201118578655">+20 111 857 8655</a>
+            <strong>Email:</strong> <a href="mailto:mustafamagdy743@gmail.com" class="contact-link">mustafamagdy743@gmail.com</a><br>
+            <strong>Phone:</strong> <span class="contact-link">+201118578655</span>
         </address>
     </section>
 
-    <section>
-        <h2>Write Your Consultation Here:</h2>
-        <form id="consultationForm">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" required><br><br>
-
-            <label for="query">Your Consultation:</label>
-            <textarea id="query" rows="4" cols="50" required></textarea><br><br>
-
-            <button type="button" onclick="submitConsultation()">Submit Consultation</button>
-        </form>
-    </section>
-
-    <div id="responseMessage"></div> <!-- Where to display response after submission -->
-
     <footer>
-        <p>&copy; 2024 AI Consulting Services. All rights reserved.</p>
+        <p>&copy; 2024 AI Car Consulting Services. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Function to submit the consultation
-        function submitConsultation() {
-            var name = document.getElementById("name").value;
-            var query = document.getElementById("query").value;
-            
-            if (name && query) {
-                document.getElementById("responseMessage").innerHTML = 
-                    `<p>Thank you, ${name}! Your consultation has been submitted successfully. We will respond soon.</p>`;
-                document.getElementById("consultationForm").reset();
-            } els
+</body>
+</html>
