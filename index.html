@@ -3,71 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Car Consulting Services</title>
+    <title>AI Consulting Services for Cars</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>AI Car Consulting Services</h1>
-        <p>Specialized AI solutions for enhancing car performance and safety.</p>
+        <h1>AI Consulting Services</h1>
+        <p>Specialized in AI solutions for cars.</p>
     </header>
-
-    <section>
-        <h2>About AI in Cars</h2>
-        <p>
-            Artificial intelligence is transforming the automotive industry by improving safety, efficiency, and driver experience.  
-            From self-driving technology to predictive maintenance, AI ensures smarter and more reliable vehicles for everyone.
-        </p>
-    </section>
 
     <section>
         <h2>Our Services</h2>
         <div class="services">
-            <a href="https://example.com/custom-ai">Custom AI Solutions</a>
-            <a href="https://example.com/data-analysis">Data Analysis and Insights</a>
-            <a href="https://example.com/machine-learning">Machine Learning Development</a>
-            <a href="https://example.com/ai-strategy">AI Strategy and Planning</a>
+            <a href="https://example.com/custom-ai" target="_blank">Custom AI Solutions</a>
+            <a href="https://example.com/data-analysis" target="_blank">Data Analysis</a>
+            <a href="https://example.com/ml-development" target="_blank">Machine Learning</a>
+            <a href="https://example.com/ai-strategy" target="_blank">AI Strategy</a>
         </div>
     </section>
 
     <section>
-        <h2>Consultation Form</h2>
+        <h2>Consultation</h2>
         <form id="consultationForm">
             <label for="name">Your Name:</label>
             <input type="text" id="name" required><br><br>
 
-            <label for="query">Your Consultation:</label>
+            <label for="query">Your Query:</label>
             <textarea id="query" rows="4" cols="50" required></textarea><br><br>
 
-            <button type="button" onclick="submitConsultation()">Submit Consultation</button>
+            <button type="button" onclick="submitConsultation()">Submit</button>
         </form>
-        <div id="responseMessage"></div> <!-- Message displayed after submission -->
+        <div id="responseMessage"></div>
     </section>
 
     <section>
         <h2>Contact Us</h2>
-        <p>Feel free to reach us for any inquiries:</p>
-        <address>
-            <strong>Email:</strong> <a href="mailto:mustafamagdy743@gmail.com" class="contact-link">mustafamagdy743@gmail.com</a><br>
-            <strong>Phone:</strong> <span class="contact-link">+201118578655</span>
-        </address>
+        <p>
+            <strong>Email:</strong> <a class="contact-link" href="mailto:mustafamagdy743@gmail.com">mustafamagdy743@gmail.com</a><br>
+            <strong>Phone:</strong> +201118578655
+        </p>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Car Consulting Services. All rights reserved.</p>
+        <p>&copy; 2024 AI Consulting Services. All rights reserved.</p>
     </footer>
 
     <script>
-        // JavaScript for handling consultation form
         function submitConsultation() {
             var name = document.getElementById("name").value;
             var query = document.getElementById("query").value;
 
             if (name && query) {
-                document.getElementById("responseMessage").innerHTML = `<p>Thank you, ${name}! Your consultation has been submitted successfully. We'll get back to you soon.</p>`;
+                document.getElementById("responseMessage").innerHTML = 
+                `<p>Thank you, ${name}! Your query has been submitted successfully. We will get back to you soon.</p>`;
                 document.getElementById("consultationForm").reset();
             } else {
-                alert("Please fill out all fields!");
+                alert("Please fill in all fields!");
             }
         }
     </script>
