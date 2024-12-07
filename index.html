@@ -23,6 +23,15 @@
     </section>
 
     <section>
+        <h2>Contact Us</h2>
+        <p>If you're interested in our services, feel free to reach out:</p>
+        <address>
+            <strong>Email:</strong> <a href="mailto:mustafamagdy743@gmail.com">mustafamagdy743@gmail.com</a><br>
+            <strong>Phone:</strong> <a href="tel:+201118578655">+20 111 857 8655</a>
+        </address>
+    </section>
+
+    <section>
         <h2>Write Your Consultation Here:</h2>
         <form id="consultationForm">
             <label for="name">Your Name:</label>
@@ -44,19 +53,11 @@
     <script>
         // Function to submit the consultation
         function submitConsultation() {
-            // Get user inputs
             var name = document.getElementById("name").value;
             var query = document.getElementById("query").value;
             
             if (name && query) {
-                // If all fields are completed, display success message
-                document.getElementById("responseMessage").innerHTML = "<p>Thank you " + name + "! Your consultation has been submitted successfully. We will respond soon.</p>";
-                document.getElementById("consultationForm").reset();  // Clear fields after submission
-            } else {
-                // In case of any empty field
-                alert("Please fill in all fields!");
-            }
-        }
-    </script>
-</body>
-</html>
+                document.getElementById("responseMessage").innerHTML = 
+                    `<p>Thank you, ${name}! Your consultation has been submitted successfully. We will respond soon.</p>`;
+                document.getElementById("consultationForm").reset();
+            } els
