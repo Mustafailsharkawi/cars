@@ -67,6 +67,35 @@ p, address {
     color: #000;
 }
 
+form {
+    text-align: center;
+}
+
+form label {
+    font-size: 1.1em;
+    color: #FFD700;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #FFD700;
+}
+
+form button {
+    background: #FFD700;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #000;
+    color: #FFD700;
+}
+
 .contact-link {
     color: #FFD700; /* ذهبي */
     font-size: 1.1em;
