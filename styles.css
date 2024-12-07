@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('https://via.placeholder.com/1600x900/000/FFF?text=Car+Background') no-repeat center center fixed;
+    background: url('https://via.placeholder.com/1600x900/000/FFF?text=Car') no-repeat center center fixed;
     background-size: cover; /* صورة السيارة كخلفية */
     color: #FFF; /* نص أبيض */
     margin: 0;
