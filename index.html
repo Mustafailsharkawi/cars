@@ -1,81 +1,75 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?car') no-repeat center center fixed; /* صورة خلفية */
-    background-size: cover;
-    color: #F5F5F5; /* لون النص الأبيض المائل */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Car Consulting Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Car Consulting Services</h1>
+        <p>Specialized AI solutions for enhancing car performance and safety.</p>
+    </header>
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-}
+    <section>
+        <h2>About AI in Cars</h2>
+        <p>
+            Artificial intelligence is transforming the automotive industry by improving safety, efficiency, and driver experience.  
+            From self-driving technology to predictive maintenance, AI ensures smarter and more reliable vehicles for everyone.
+        </p>
+    </section>
 
-header h1 {
-    color: #FFD700; /* ذهبي */
-    margin: 0;
-}
+    <section>
+        <h2>Our Services</h2>
+        <div class="services">
+            <a href="https://example.com/custom-ai">Custom AI Solutions</a>
+            <a href="https://example.com/data-analysis">Data Analysis and Insights</a>
+            <a href="https://example.com/machine-learning">Machine Learning Development</a>
+            <a href="https://example.com/ai-strategy">AI Strategy and Planning</a>
+        </div>
+    </section>
 
-header p {
-    color: #F5F5F5; /* أبيض خفيف */
-    font-size: 1.2em;
-}
+    <section>
+        <h2>Consultation Form</h2>
+        <form id="consultationForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required><br><br>
 
-section {
-    margin: 20px auto;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    width: 80%;
-}
+            <label for="query">Your Consultation:</label>
+            <textarea id="query" rows="4" cols="50" required></textarea><br><br>
 
-h2 {
-    color: #FFD700; /* ذهبي */
-    text-align: center;
-}
+            <button type="button" onclick="submitConsultation()">Submit Consultation</button>
+        </form>
+        <div id="responseMessage"></div> <!-- Message displayed after submission -->
+    </section>
 
-p, address {
-    color: #F5F5F5; /* أبيض خفيف */
-    text-align: center;
-    font-size: 1.1em;
-}
+    <section>
+        <h2>Contact Us</h2>
+        <p>Feel free to reach us for any inquiries:</p>
+        <address>
+            <strong>Email:</strong> <a href="mailto:mustafamagdy743@gmail.com" class="contact-link">mustafamagdy743@gmail.com</a><br>
+            <strong>Phone:</strong> <span class="contact-link">+201118578655</span>
+        </address>
+    </section>
 
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+    <footer>
+        <p>&copy; 2024 AI Car Consulting Services. All rights reserved.</p>
+    </footer>
 
-.services a {
-    text-decoration: none;
-    color: #FFD700;
-    font-size: 1.2em;
-    font-weight: bold;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
+    <script>
+        // JavaScript for handling consultation form
+        function submitConsultation() {
+            var name = document.getElementById("name").value;
+            var query = document.getElementById("query").value;
 
-.services a:hover {
-    background: #FFD700;
-    color: #000;
-}
-
-.contact-link {
-    color: #FFD700; /* ذهبي */
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #FFD700; /* ذهبي */
-}
+            if (name && query) {
+                document.getElementById("responseMessage").innerHTML = `<p>Thank you, ${name}! Your consultation has been submitted successfully. We'll get back to you soon.</p>`;
+                document.getElementById("consultationForm").reset();
+            } else {
+                alert("Please fill out all fields!");
+            }
+        }
+    </script>
+</body>
+</html>
